@@ -1,0 +1,74 @@
+.generator {
+    padding: 20px 0;
+}
+
+.steps-row {
+    .step {
+        line-height: 2;
+        padding: 20px;
+        margin-bottom: 40px;
+        opacity: 1;
+        transition: opacity 200ms ease-out;
+    
+        h2 > .num {
+            background: $spongeContainer;
+            color: #fff;
+            text-align: center;
+    
+            border-radius: 50%;
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+    
+            position: relative;
+            top: -2px;
+    
+            font-size: 23px;
+            padding: 6px 0;
+    
+            margin-right: 4px;
+        }
+    
+        .image-error, .step-nav {
+            margin-top: 8px;
+        }
+    
+        .step-nav {
+            font-size: 13px;
+            color: #888;
+        }
+    
+        &[disabled] {
+            opacity: 0.3;
+    
+            * {
+                pointer-events: none;
+            }
+        }
+    }
+
+    @media(min-width: 850px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .step {
+            width: 50%;
+            padding: 60px;
+            border-right: $separatorBorderStyle;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+}
+
+.result > img {
+    display: block;
+}

@@ -1,0 +1,54 @@
+$background: #fff;
+$spongeContainer: #ddbd37;
+$spongeText: #957d19;
+$spongeTextHover: #7a6715;
+$separatorBorderStyle: 1px solid #dedede;
+
+html {
+    background: $background;
+}
+
+body {
+    background: none;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+
+    > main {
+        padding: 30px 0;
+        flex-grow: 1;
+
+        .container {
+            min-height: 100%;
+        }
+    }
+
+    > footer {
+        > .container {
+            $horizontalPadding: 16px;
+            padding-top: $horizontalPadding; padding-bottom: $horizontalPadding;
+            border-top: $separatorBorderStyle;
+            display: flex;
+            align-items: center;
+
+            p {
+                flex-grow: 1;
+                margin: 0;
+            }
+        }
+    }
+}
+
+a {
+    color: $spongeText;
+
+    &:hover {
+        color: $spongeTextHover;
+    }
+}
+
+.home-flex {
+    display: flex;
+    flex-direction: column;
+}
