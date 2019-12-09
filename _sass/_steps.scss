@@ -4,13 +4,14 @@
 
 .steps-row {
     .step {
+        line-height: 1.7;
         padding: 20px;
         margin-bottom: 40px;
         opacity: 1;
         transition: opacity 200ms ease-out;
 
         h2 {
-            margin-bottom: 4px;
+            margin-bottom: 12px;
 
             > .num {
                 background: $spongeContainer;
