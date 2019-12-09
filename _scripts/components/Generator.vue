@@ -2,7 +2,7 @@
     <div class="generator">
         <div class="steps-row">
             <step :index="0" :current-index="currentIndex" title="Select your image" :can-advance="providedImage" @change:index="changeIndex">
-                <p>Find a still from a SpongeBob episode that you would like to use here. Read through the <a target="_blank" href="https://www.reddit.com/r/spongestrisp/wiki">Wiki</a> to learn how to find source material.</p>
+                <p>Find a still from a SpongeBob episode that you would like to use here. Read through the <a target="_blank" href="https://www.reddit.com/r/spongestrips/wiki">Wiki</a> to learn how to find source material.</p>
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="image-upload" accept="image/png,image/x-png,image/gif,image/jpeg" ref="input" @change="imageChanged">
                     <label class="custom-file-label" for="image-upload">Choose image</label>
