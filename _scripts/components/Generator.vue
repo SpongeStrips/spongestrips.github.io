@@ -12,7 +12,7 @@
 
             <step :index="1" :current-index="currentIndex" title="Caption your strip" :can-advance="caption.length > 0" @change:index="changeIndex">
                 <p>Add a disturbing backstory to make your spongestrip extra spicy!</p>
-                <textarea class="form-control" placeholder="[placeholder here]" rows="1" v-model="caption"></textarea>
+                <textarea class="form-control" rows="1" v-model="caption"></textarea>
             </step>
         </div>
 
