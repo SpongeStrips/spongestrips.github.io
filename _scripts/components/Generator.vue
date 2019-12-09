@@ -2,7 +2,7 @@
     <div class="generator">
         <div class="steps-row">
             <step :index="0" :current-index="currentIndex" title="Select your image" :can-advance="providedImage" @change:index="changeIndex">
-                <p>[info on finding it]</p>
+                <p>Find a still from a SpongeBob episode that you would like to use here. Read through the <a target="_blank" href="https://www.reddit.com/r/spongestrisp/wiki">Wiki</a> to learn how to find source material.</p>
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="image-upload" accept="image/png,image/x-png,image/gif,image/jpeg" ref="input" @change="imageChanged">
                     <label class="custom-file-label" for="image-upload">Choose image</label>
@@ -11,13 +11,13 @@
             </step>
 
             <step :index="1" :current-index="currentIndex" title="Caption your strip" :can-advance="caption.length > 0" @change:index="changeIndex">
-                <p>[info on coming up with captions]</p>
+                <p>Add a disturbing backstory to make your spongestrip extra spicy!</p>
                 <textarea class="form-control" placeholder="[placeholder here]" rows="1" v-model="caption"></textarea>
             </step>
         </div>
 
         <div class="steps-row" v-if="currentIndex >= 2">
-            <step :index="2" :current-index="currentIndex" title="Save your Sponge Strip" :is-final-step="true" @restart="restart" @change:index="changeIndex">
+            <step :index="2" :current-index="currentIndex" title="Save your Spongestrip" :is-final-step="true" @restart="restart" @change:index="changeIndex">
                 <result :image="providedImage" :text="caption"></result>
             </step>
         </div>
@@ -36,7 +36,7 @@ export default {
             providedImage: null,
             imageErrored: false,
             currentIndex: 0,
-            caption: "Test test test test test test test test test"
+            caption: ""
         };
     },
     methods: {
